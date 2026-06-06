@@ -8,6 +8,7 @@
 
 body {
     scroll-behavior: smooth;
+    scroll-padding: 120px;
 }
 
 main {
@@ -37,12 +38,29 @@ main {
 /* hero section css start */
 .hero-section {
     display: flex;
-    align-items: center;
     height: 600px;
-    background-position: bottom right;
-    background-size: 100% auto;  
-    background-repeat: no-repeat;
-    background-image: url('./../img/hero\ shape.png');
+    position: relative;
+    align-items: center;
+    background-color: #cbdae6;
+}
+
+.hero-section-content {
+    z-index: 2;
+}
+
+.hero-shape-1 {
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    position: absolute; 
+}
+
+.hero-shape-2 {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    position: absolute;
 }
 /* hero section css end */
 
@@ -87,4 +105,47 @@ main {
     position: absolute;
     background-color: #DEEDE6;
 }
+
+.auto-height {
+    overflow-y: auto;
+    max-height: 260px;
+}
+
+.top-user-list .leaderboard-profile {
+    padding: 12px;
+    border-radius: 12px;
+    transition: 500ms all ease;
+}
+
+.top-user-list .leaderboard-profile:hover {
+    background-color: #DEEDE6;
+}
+
+.top-user-list .leader-img {
+    width: 60px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
 /* analytic report end */
+
+/* footer design css start */
+.footer-content {
+    padding-block: 3rem;
+    color: #fff;
+    background-color: #204935;
+}
+
+.icon-box a {
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 50%;
+    text-decoration: none;
+    border: 1px solid #fff;
+}
+/* footer design css end */
+
+@media (max-width: 1052px) {
+    .hero-shape-1 {
+        mix-blend-mode: exclusion;
+    }
+}
